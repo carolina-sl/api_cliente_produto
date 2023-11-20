@@ -13,12 +13,6 @@ use Illuminate\Http\Request;
 //     return $request->user();
 // });
 
-
-
-// Route::get('/clientes', [ClientesController::class, 'index']);
-// Route::get('/pedidos', [PedidosController::class, 'index']);
-// Route::post('/pedidos', [PedidosController::class, 'store']);
-
 Route::apiResource('/clientes', \App\Http\Controllers\Api\ClientesController::class);
 Route::apiResource('/pedidos', \App\Http\Controllers\Api\PedidosController::class);
 Route::apiResource('/pedido_items', \App\Http\Controllers\Api\PedidoItemsController::class);

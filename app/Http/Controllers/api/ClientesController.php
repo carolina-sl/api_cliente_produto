@@ -12,4 +12,8 @@ class ClientesController extends Controller {
         $clientes = Cliente::with('Pedido')->get();
         return response()->json($clientes);
     }
+
+    public function store(Request $request) {
+        return response()->json(Cliente::create($request->all()), 201);
+    }
 }
